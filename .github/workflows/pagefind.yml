@@ -1,0 +1,16 @@
+name: Build Pagefind
+on: [push]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npx pagefind --site .
+      - run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add pagefind
+          git commit -m "Oppdatert sokeindeks" || exit 0
+          git push
