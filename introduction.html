@@ -74,14 +74,15 @@ function GoToTop() {
 
 		<div class="content" id="Introduction">
 			<div class="grampsstylednote">
-			<link href="./pagefind/pagefind-ui.css" rel="stylesheet">
-<script src="/slekt/pagefind/pagefind-ui.js"></script>
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
 <div id="search"></div>
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({ element: "#search", showSubResults: true, baseUrl: "./" });
+        new PagefindUI({ element: "#search", showSubResults: true, baseUrl: "/" });
     });
 </script>
+
 			</div>
 		</div>
 		<div class="fullclear"></div>
